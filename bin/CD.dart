@@ -46,8 +46,8 @@ class CD {
     _artis = dtArtis;
   }
 
-  @override
-  String toString() {
-    return " ${this._id}, ${this._nama}, ${this._judul}, ${this._harga}, ${this._lokasi}, ${this._artis}";
+  get Display {
+    print(
+        "${this.id}, ${this.nama}, ${this.judul}, ${this.harga}, ${this._lokasi}, ${this._artis}");
   }
 }

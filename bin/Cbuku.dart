@@ -54,9 +54,9 @@ class Buku {
 
   int get lokasi => this._lokasi!;
 
-  @override
-  String toString() {
-    return ("${this.id}, ${this.nama}, ${this.judul}, ${this.harga}, ${this.isbn}, ${this._lokasi}, ${this.penulis}");
+  get Display {
+    print(
+        "${this.id}, ${this.nama}, ${this.judul}, ${this.harga}, ${this.isbn}, ${this._lokasi}, ${this.penulis}");
   }
 }
 
