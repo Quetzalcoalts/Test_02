@@ -7,8 +7,9 @@ class Buku {
   int? _harga;
   String? _isbn;
   String? _penulis;
+  int? _lokasi;
 
-  Buku(this._id, this._nama, this._judul, this._harga, this._isbn,
+  Buku(this._id, this._nama, this._judul, this._harga, this._isbn, this._lokasi,
       this._penulis);
 
   set id(int dtId) {
@@ -47,9 +48,15 @@ class Buku {
 
   String get penulis => this._penulis!;
 
+  set lokasi(int dtLokasi) {
+    _lokasi = dtLokasi;
+  }
+
+  int get lokasi => this._lokasi!;
+
   @override
   String toString() {
-    return ("${this.id}, ${this.nama}, ${this.judul}, ${this.harga}, ${this.isbn}, ${this.penulis}");
+    return ("${this.id}, ${this.nama}, ${this.judul}, ${this.harga}, ${this.isbn}, ${this._lokasi}, ${this.penulis}");
   }
 }
 
@@ -57,8 +64,8 @@ class TravelGuide extends Buku {
   String? negara;
 
   TravelGuide(int? id, String? nama, String? judul, int? harga, String? isbn,
-      String? penulis, String? negara2)
-      : super(id, nama, judul, harga, isbn, penulis) {
+      int? lokasi, String? penulis, String? negara2)
+      : super(id, nama, judul, harga, isbn, lokasi, penulis) {
     this.negara = negara2;
   }
 }
